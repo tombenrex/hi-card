@@ -40,10 +40,21 @@ button.addEventListener("click", () => {
   }, 4000);
 });
 
-// Click image ➜ reset
 img.addEventListener("click", () => {
   img.remove();
   button.style.display = "flex";
   message.style.display = "none";
   img.style.animation = "fadeInZoom 0.5s ease-out";
+});
+
+button.addEventListener("mouseenter", () => {
+  button.style.animation =
+    "flyAcrossScreen 8s cubic-bezier(0.32, 0.01, 0.44, 1.07) forwards";
+});
+
+button.addEventListener("mouseleave", () => {
+  button.style.animation = "none";
+  button.offsetHeight;
+  button.style.animation =
+    "flyAcrossScreen 8s cubic-bezier(0.32, 0.01, 0.44, 1.07) forwards";
 });
