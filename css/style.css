@@ -1,0 +1,52 @@
+main {
+  background-color: darkmagenta;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#hi {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spinAndShrink {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  80% {
+    transform: rotate(360deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.5);
+  }
+}
+
+#toggle-img {
+  display: block;
+  margin: auto;
+  animation: fadeInZoom 0.5s ease-out;
+  cursor: pointer;
+  height: 80%;
+}
