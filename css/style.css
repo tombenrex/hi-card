@@ -18,6 +18,11 @@ main {
   align-items: center;
   cursor: pointer;
   font-size: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+#hi:hover {
+  animation: flyAway 1s forwards;
 }
 
 @keyframes fadeInZoom {
@@ -43,10 +48,30 @@ main {
   }
 }
 
+@keyframes flyAway {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(300px, -300px) rotate(180deg) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(600px, -600px) rotate(360deg) scale(0);
+    opacity: 0;
+  }
+}
+
 #toggle-img {
   display: block;
   margin: auto;
   animation: fadeInZoom 0.5s ease-out;
   cursor: pointer;
   height: 80%;
+  transition: transform 0.4s ease-in-out;
+}
+
+#toggle-img:hover {
+  transform: rotate(10deg) scale(1.1);
 }
